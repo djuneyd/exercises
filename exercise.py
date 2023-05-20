@@ -1,12 +1,11 @@
 import time
-nums = [1,2,3,2]
+nums = [1,2,3,3]
 class Solution:
     def containsDuplicate(self, nums: list[int]):
         num = []
         for i in range(len(nums)):
             if nums[i] in num:
                 return True
-                break
             else:
                 num.append(nums[i])
         return False
