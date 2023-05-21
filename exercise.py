@@ -1,16 +1,11 @@
 import time
-nums = [1,2,3,3]
 class Solution:
     def containsDuplicate(self, nums: list[int]):
-        num = []
-        for i in range(len(nums)):
-            if nums[i] in num:
-                return True
-            else:
-                num.append(nums[i])
-        return False
+        return True if len(nums) != len(set(nums)) else False
 ############################Проверка############################
 st = time.time()
-print(Solution.containsDuplicate(None, nums))             # -> True
+print(Solution.containsDuplicate(None, [1,2,3,1]))             # -> True
+print(Solution.containsDuplicate(None, [1,2,3,4]))             # -> False
+print(Solution.containsDuplicate(None, [1,1,1,3,3,4,3,2,4,2])) # -> True
 et = time.time()
 print(f"Время выполнения кода: {et-st} секунд")
