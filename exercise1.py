@@ -1,4 +1,4 @@
-def calculate_water(heights):
+def water(heights):
     n = len(heights)
     left_max = [0] * n
     right_max = [0] * n
@@ -14,4 +14,4 @@ def calculate_water(heights):
         if water > 0:
             total_water += water
     return total_water
-print(calculate_water([4, 6, 0, 3, 2, 5]))
+print(water([4, 6, 0, 3, 2, 5]))
