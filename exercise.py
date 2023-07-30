@@ -1,11 +1,11 @@
-import time
-class Solution:
-    def containsDuplicate(self, nums: list[int]):
-        return True if len(nums) != len(set(nums)) else False
-############################Проверка############################
-st = time.time()
-print(Solution.containsDuplicate(None, [1,2,3,1]))             # -> True
-print(Solution.containsDuplicate(None, [1,2,3,4]))             # -> False
-print(Solution.containsDuplicate(None, [1,1,1,3,3,4,3,2,4,2])) # -> True
-et = time.time()
-print(f"Время выполнения кода: {et-st} секунд")
+def anagram(s, t):
+    if len(s) == len(t) and set(s) == set(t):
+        for i in range(len(s)):
+            if s[i] in t:
+                continue
+            else:
+                return False
+        return True
+    else:
+        return False
+print(anagram('anagram', 'magaran'))
